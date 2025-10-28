@@ -1,0 +1,53 @@
+分开搜索再搜索交叉领域
+
+单独领域
+    1.Agentic AI 
+    agentic AI
+    AI agents
+    autonomous agents
+    large language model agents
+    LLM agents
+    multi-agent systems security testing
+
+
+2.ICS系统安全
+    industrial control system security vulnerability
+    ICS security testing
+    SCADA security vulnerability detection
+    industrial cyber physical system  attack
+    IIoT security threats
+
+
+3.工业协议安全
+    Modbus security vulnerability
+    OPC-UA security testing
+    Profinet security attacks
+    industrial protocol fuzzing OR testing
+
+交叉领域
+    "AI-based security testing" "industrial control"
+    "automated vulnerability detection" ICS
+    "intelligent fuzzing" "industrial protocols"
+    "machine learning" "protocol testing" industrial
+    "AI agents" "cyber physical systems" security
+    "automated test generation" SCADA OR Modbus OR OPC-UA
+    "deep learning" "industrial protocol" vulnerability
+
+高级搜索
+    "agentic AI" AND ("industrial automation" OR "ICS") AND (security OR vulnerability)
+
+    ("AI agent" OR "autonomous agent") AND ("test generation" OR "vulnerability detection") AND ("industrial protocol" OR "ICS")
+
+    ("large language model" OR "LLM") AND ("security testing" OR "penetration testing") AND ("industrial" OR "SCADA")
+
+
+最新研究
+    
+
+重点关注刊物
+- IEEE Transactions on Industrial Informatics
+- ACM CCS (Computer and Communications Security)
+- NDSS (Network and Distributed System Security)
+- IEEE S&P (Security and Privacy)
+- Computers & Security
+- Journal of Cybersecurity

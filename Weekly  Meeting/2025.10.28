@@ -1,0 +1,70 @@
+2025.10.28
+本周目标：产出Proposal
+
+Roopak：最终产出一个高质量Q1期刊论文。
+第一部分：3-5个研究问题 涵盖设计和开发方面
+第二部分：作为工程研究人员，需要设计和开发问题的解决方案。
+
+
+
+
+
+会议内容：
+
+Roopak sinha
+And in a master's, l think it is quite possible to publish one really good Q1journal.
+Roopak Sinha
+We need to identify your main research objective and research questions
+Roopak SinhaAnd usually we will have in a master's three to five research questions.Roopak Sinha The initial one or two questions are kind of exploratory in nature so
+
+Roopak Sinha
+Objectively evaluate your work against your main competitors out there in
+research
+
+Roopak Sinha
+That is kind of the the goal of the first part. Then the second part.
+Roopak Sinha
+In our case we are kind of engineering researchers is about designing anddeveloping a solution to the problem
+
+Roopak SinhaAnd so this next one or two questions will cover the design anddevelopment aspects and then the final questions cover the evaluation orassessment of your solution.
+Roopak SinhaTo see how well it solves the problem.
+
+Roopak Sinhais done, if not all of this is done.
+suggest we focus on your first couple of questions. You know the
+exploration part of your thesis so that when you start the thesis, most of this is done, if not all of this is done.
+
+Roopak SinhaA start paper.
+Then we we can just focus a lot more on deeper design development,
+evaluation of of your work, which l think will make for a really good Q1 or an A start paper.
+
+Farzana ZahidSo what we can do with after every meeting with rupak, we, you and me willsit together so that both of us are on the same page.Farzana ZahidAnd if you have any confusion we can fix it or resolve it riqht.
+So what he was saying that you have to create a proposal. Don't worry
+about the proposal. You just have to give introduction that what you are
+going to do. The area, the background of the area and the research
+questions right.
+
+What will you do and how will you do it?
+Farzana Zahid
+Just a plan, right?
+Farzana Zahid
+The purpose of the plan is to make sure that, yes, you are on your track,
+nothing else, right?
+Farzana Zahid
+And what are the
+
+Farzana ZahidAnd what are the? What are the proposed things which you want to do?
+Farzana Zahid
+But look, these things could be changed.Farzana ZahidBut the purpose of this proposal is to make sure that, yes, you havesomething in your mind and you say, OK, l am going to do these things.
+
+Don't worry, we are very prompt in response giving the response so you will
+not get be delayed unless for example we are very busy or anything but you
+can use the teams to message me the way you are doing looked at the way
+Rupat has sent the message.
+
+
+As I discussed, start looking into Agentic AI and industrial control system (industrial automation, industrial cyber physical system, IIoT). Below is the summary if you are interested into following, otherwise you can propose your idea, too.
+
+Summary:
+This research develops AI agents to generate protocol-aware test-cases to strengthen the security of critical infrastructure. The hypothesis is that agentic AI-based testing can identify vulnerabilities in the major components of critical systems, while reducing false rates, and accelerating secure mitigation compared to traditional testing methods.
+These AI agents parse industrial protocol specifications, generate semantic test sequences, model device states and timing, and adapt strategies based on prior test outcomes. Controlled testbeds simulating industrial, water treatment, and transportation systems will benchmark agents’ performance using metrics like vulnerability discovery, detection accuracy, detection time, and mitigation effectiveness.
+Diverse devices, firmware versions, and protocols such as Modbus, Profinet, and OPC-UA, will ensure representative evaluation. All testing will be conducted in isolated environments with coordinated disclosure protocols to minimize operational risk.
