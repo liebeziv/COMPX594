@@ -1,0 +1,32 @@
+Agentic AI
+
+ReAct提升:34%(ALFWorld)
+PentestGPT提升:228.6%(vs GPT-3.5)
+Claude 4:72.5%(SWE-bench, SOTA)
+幻觉率:27%
+多代理开销:15×token
+
+ICS安全
+
+年度攻击:4.2亿次
+增长:30%
+物理后果:68起(80%勒索软件)
+新漏洞:60个/天(电网)
+Colonial Pipeline:$4.4M赎金
+
+协议测试
+
+AFLNet提升:60%(分支),56%(语句),67%(状态)
+ChatAFL提升:47.6%(状态转换),5.8%(代码覆盖)
+MALF通过率:88-92%
+MALF零日:3个
+Magma:200,000+ CPU小时
+
+研究空白
+
+ICS Agentic渗透工具:0
+ICS+AI(检测):95%
+ICS+AI(测试):<5%
+PentestGPT星标:6,500+
+ICS渗透代理仓库:0
+

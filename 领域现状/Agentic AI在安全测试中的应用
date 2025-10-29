@@ -1,0 +1,137 @@
+4.1 AI Agents在IT网络安全测试中的成熟应用
+PentestGPT(USENIX Security 2024)
+**架构:**三个自交互模块(推理、生成、解析) arXiv +2
+能力:
+
+与GPT-3.5相比任务完成率提高228.6% arXivUSENIX
+与GPT-4相比提高58.6%
+开源,GitHub星标6,500+ USENIXUSENIX
+
+局限性:
+
+上下文丢失 USENIX
+图像解释困难
+准确构建利用代码困难 USENIXarxiv
+
+HackSynth(2024年12月)
+
+双模块(规划器+摘要器)
+在PicoCTF和OverTheWire上基准测试(200个挑战) arXiv +2
+
+AutoPentest(2025年5月)
+
+基于LangChain的多代理系统
+Hack The Box机器上15-25%子任务完成率 arXiv
+
+Google AI安全计划(2024-2025)
+
+CodeMender:6个月向开源项目上游72个安全修复 Google DeepMind
+BigSleep:在SQLite中发现零日漏洞 Google
+
+**商业平台:**FireCompass、Synack、Hadrian、Aikido FireCompassFireCompass
+4.2 LLM渗透测试工具关键局限
+
+上下文管理:LLM在长测试场景中挣扎
+幻觉问题:LLM虚构导致的误报 VoiceflowZep
+复杂利用:难以链接多步骤漏洞
+非HTTP表面:在二进制协议、固件、OT/ICS上表现不佳
+成本:API成本可能很高(每次测试20-100+美元) Synack
+
+4.3 AI/ML在ICS安全中的应用:检测vs测试
+关键发现:ICS安全中的AI/ML研究95%以上集中在入侵检测,而非渗透测试。
+ML基础IDS代表性研究:
+
+Yang et al. (2019):SCADA网络深度学习 IEEE Xplore
+Wang et al. (2021):堆栈深度学习方法
+2024-2025混合方法:HAE-HRL架构 PubMed Central
+
+常见数据集:
+
+SWaT(Secure Water Treatment):最流行
+USENIX CSET16:Modbus流量
+NSL-KDD、WSN-DS USENIXMississippi State University
+
+检测方法:
+
+基于签名(Suricata)
+机器学习(SVM、随机森林)
+深度学习(CNN、LSTM、自动编码器、GAN) TechScienceSpringerOpen
+
+关键空白:所有研究都集中在被动检测,而非主动渗透测试。
+4.4 协议测试与机器学习集成
+ChatAFL(NDSS 2024)
+**方法:**LLM引导的有状态协议模糊测试
+结果:
+
+比AFLNet多47.6%状态转换
+覆盖29.6%更多状态
+代码覆盖率提高5.8%
+发现9个新漏洞 NDSS SymposiumarXiv
+
+**局限性:**LLM输出不可靠,幻觉,假设了解 arXiv规范 ResearchGate
+MALF——ICS协议的多代理LLM框架(2024年10月)
+关键发现:这是最接近"ICS协议测试的Agentic AI"的工作
+架构:
+
+多代理协调系统
+RAG用于领域知识
+QLoRA微调
+
+**目标协议:**Modbus/TCP、S7Comm、Ethernet/IP
+结果:
+
+测试用例通过率:88-92%
+发现3个零日漏洞(1个CNVD确认)
+部署在工业攻防靶场 arXiv
+
+**范围限制:**仅模糊测试——非综合渗透测试
+MALF vs 所需空白闭合:
+方面MALF需要范围仅模糊测试全面渗透测试自主性半自主完全自主覆盖输入生成侦察、利用、后利用协议3个协议所有ICS协议架构多代理模糊多代理渗透(类PentestGPT)
+**关键区别:**模糊测试≠渗透测试
+
+模糊测试:自动输入生成发现崩溃
+渗透测试:综合安全评估,包括全生命周期
+
+4.5 关键空白分析
+存在的内容:
+
+✅ IT渗透测试的Agentic AI(PentestGPT等)
+✅ ICS入侵检测的ML/DL(大量文献)
+✅ LLM引导的协议模糊测试(ChatAFL、MALF)
+✅ 通用网络安全的Agentic AI
+
+不存在的内容:
+
+❌ ICS/SCADA系统的综合性agentic AI渗透测试
+❌ "ICS的PentestGPT"
+❌ 用于全周期ICS协议安全测试的自主代理
+
+证据支持空白:
+文献检索分析:
+
+"agentic AI ICS protocol testing" → 无直接匹配
+"LLM agent industrial protocol" → 仅模糊测试结果
+"autonomous agent SCADA testing" → 仅检测结果
+
+行业证据:
+
+Synack明确声明(2025):"OT/ICS需要利用工程而非提示工程...AI成功比例明显较低"
+无商业产品提供ICS协议的全面agentic渗透测试
+
+定量证据:
+类别IT安全ICS安全比率Agentic AI渗透测试工具10+0∞LLM模糊测试框架15+1(仅模糊)15:1AI/ML检测系统100+200+1:2代理评估基准8+0∞
+4.6 空白存在的原因
+技术挑战:
+
+安全问题:ICS控制物理过程,错误可能造成伤害
+协议复杂性:ICS协议不同于IT协议
+有状态行为:复杂状态机
+有限数据集:公共ICS测试数据集稀缺
+领域专业知识:需要AI/ML和ICS/OT双重专业知识
+监管问题:测试真实ICS可能违反安全法规
+
+研究优先级:
+
+ICS安全研究优先预防(检测)而非测试(渗透)
+模糊测试比主动利用更安全
+重点保护关键基础设施

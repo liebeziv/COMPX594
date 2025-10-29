@@ -1,0 +1,31 @@
+Agentic AI
+
+Wang, L., et al. (2024). A Survey on LLM Autonomous Agents. Front Comp Sci, 18(6), 186345
+Yao, S., et al. (2023). ReAct: Synergizing Reasoning and Acting. ICLR 2023
+Li, G., et al. (2023). CAMEL. NeurIPS 2023
+
+ICS安全
+
+Dragos (2024). 2024 OT Cybersecurity Year in Review
+CISA (2024). ICS-CERT Advisories
+Waterfall Security (2024). 2024 Threat Report
+
+协议测试
+
+Hazimeh, A., et al. (2024). A Survey of Protocol Fuzzing. arXiv:2401.01568v2
+Pham, V.T., et al. (2020). AFLNet. ICST 2020
+ICPFuzzer (2021). Cybersecurity (SpringerOpen)
+Zhao, Y., et al. (2019). SeqFuzzer. ICST 2019
+
+LLM安全测试
+
+Deng, G., et al. (2024). PentestGPT. USENIX Security 2024
+Muzsai, L., et al. (2024). HackSynth. arXiv:2412.01778
+Meng, R., et al. (2024). ChatAFL. NDSS 2024
+Ning, B., & Wang, X. (2024). MALF. arXiv:2510.02694
+
+基准
+
+Liu, X., et al. (2023). AgentBench. ICLR 2024
+Hazimeh, A., et al. (2020). Magma. ACM SIGMETRICS 2020
+Natella, R., & Pham, V.T. (2021). ProFuzzBench. ISSTA 2021
