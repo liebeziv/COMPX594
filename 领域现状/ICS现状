@@ -2,36 +2,36 @@
 2.1 威胁态势演变
 攻击量化数据:
 
-攻击量:2023-2024年关键基础设施遭受超过4.2亿次攻击,相当于每秒13次攻击,比2022年增长30% dragos
-物理后果:2023年68起网络攻击对ICS/OT系统造成物理后果,其中80%归因于勒索软件 dragosWaterfall-security
+攻击量:2023-2024年关键基础设施遭受超过4.2亿次攻击,相当于每秒13次攻击,比2022年增长30% 
+物理后果:2023年68起网络攻击对ICS/OT系统造成物理后果,其中80%归因于勒索软件 Waterfall-security
 关键基础设施目标:2023年向FBI报告的勒索软件攻击中,有2/5针对关键基础设施部门
 
 2.2 威胁行为者分类
-国家级行为者(Dragos追踪全球23个威胁组织,2024年9个活跃于OT): Dragos
+国家级行为者(追踪全球23个威胁组织,2024年9个活跃于OT): 
 VOLTZITE(与Volt Typhoon重叠)
 
-目标:美国关键基础设施、电信、应急服务 dragos
-方法:入侵面向互联网的SOHO路由器,针对电力、油气、水设施 dragos
+目标:美国关键基础设施、电信、应急服务 
+方法:入侵面向互联网的SOHO路由器,针对电力、油气、水设施 
 
 BAUXITE(CyberAv3ngers)
 
-隶属:伊朗革命卫队网络与电子指挥部 dragosDragos
-2024年:部署iocontrol恶意软件,影响400+受害者 dragos
+隶属:伊朗革命卫队网络与电子指挥部 
+2024年:部署iocontrol恶意软件,影响400+受害者 
 
 ELECTRUM(与Sandworm重叠)
 
-已展示能力:电力网络运营中断 dragos
-恶意软件:AcidPour、Kapeka、FrostyGoop dragos
-2024年影响:乌克兰600+公寓楼2天供暖损失 dragosDragos
+已展示能力:电力网络运营中断 
+恶意软件:AcidPour、Kapeka、FrostyGoop 
+2024年影响:乌克兰600+公寓楼2天供暖损失 
 
 **勒索软件组织:**LockBit、DarkSide、ALPHV/BlackCat、Rhysida
 **黑客行动主义者:**CyberArmyofRussia_Reborn、Hunt3r Kill3rs、Blackjack
 2.3 漏洞趋势
 
-**70%**的漏洞深藏于ICS网络内部 dragos
-**39%**可能同时导致视图丢失和控制丢失 dragos
-**22%**的公告是可网络利用且面向边界的(高于2023年的16%) dragos
-美国电网每天出现60个新的脆弱点 dragos
+70%的漏洞深藏于ICS网络内部 
+39%可能同时导致视图丢失和控制丢失 
+22%的公告是可网络利用且面向边界的(高于2023年的16%) 
+美国电网每天出现60个新的脆弱点 
 
 2.4 协议安全分析
 Modbus TCP关键安全缺陷:
@@ -48,7 +48,7 @@ CVE-2025-41703-41707:Phoenix Contact,DoS和操纵漏洞 CyberDanube
 
 活跃威胁:
 
-FrostyGoop恶意软件(2024):针对Modbus TCP设备,导致乌克兰供暖中断 dragos
+FrostyGoop恶意软件(2024):针对Modbus TCP设备,导致乌克兰供暖中断 
 M.A.T.R.I.X工具:Python Modbus攻击工具 Trustwave
 
 OPC-UA已知漏洞:
@@ -78,9 +78,9 @@ Colonial Pipeline(2021年5月)
 
 水部门攻击(2023-2024)
 
-阿肯色城:成本超过16万美元 dragos
-BAUXITE活动:影响美国、欧洲、澳大利亚 dragos
-Hunt3r Kill3rs:攻击Unitronics PLC、Rockwell控制器 dragosDragos
+阿肯色城:成本超过16万美元 
+BAUXITE活动:影响美国、欧洲、澳大利亚 
+Hunt3r Kill3rs:攻击Unitronics PLC、Rockwell控制器 
 
 Change Healthcare(2024年2月)
 
