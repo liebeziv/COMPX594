@@ -1,0 +1,156 @@
+Resource-Constrained AI Agents for Field-Deployable ICS Protocol Security Testing: 
+Investigating Capability Boundaries and Deployment Trade-offs in Edge Computing Environments
+
+1. 研究题目
+便携式AI驱动的工业控制系统协议安全现场测试工具
+Portable AI-Powered Field Testing Tool for ICS Protocol Security
+关键词：工业控制系统、边缘AI、便携式测试、SLM部署、现场安全评估
+
+
+2.1 研究情境 (Research Context)
+
+工业控制系统的安全评估面临独特的部署约束：
+
+物理隔离约束 (Air-Gap Constraint)：
+- 关键基础设施通常运行在气隙网络中，无法连接云端AI服务
+- 据CISA报告，78%的ICS设施禁止外部网络连接以防数据泄露
+
+现场时效约束 (Field Response Constraint)：
+- 安全事件响应窗口通常<4小时
+- 需要在生产线停机时间内完成测试（平均2-6小时）
+
+资源限制约束 (Resource Limitation)：
+- 工业现场缺乏高性能计算资源
+- 测试设备必须低功耗、便于携带（≤5kg）
+
+研究挑战：现有AI安全测试方案（如基于GPT-4的PentestGPT）依赖云端
+大模型，无法在上述约束下运行。这引出核心研究问题：
+
+> "在资源受限且网络隔离的边缘环境中，轻量级AI智能体能否
+> 实现与云端方案相当的ICS协议安全测试能力？"
+
+市场需求：
+
+2024年ICS渗透测试市场规模达$50K-$200K/次，但中小企业负担不起
+4.2亿次年度攻击量驱动现场快速响应需求
+工业4.0推动OT/IT融合，需要易用的安全工具
+
+2.2 研究机会
+技术可行性：
+
+小型语言模型（SLM）如Phi可在树莓派上流畅运行
+边缘AI推理速度已达20+ tokens/s（满足现场使用）
+成熟的ICS协议库（pymodbus、opcua）可快速集成
+
+创新价值：
+
+首个可装入工具箱的AI驱动ICS安全测试设备
+离线运行，无数据外泄风险
+降低专业门槛，工程师"对话式"完成测试
+
+3. 研究目标与范围
+3.1 核心目标
+开发一款便携式、离线可用、AI驱动的ICS协议安全现场测试工具，部署在树莓派等边缘设备上，帮助安全工程师快速完成协议安全评估。
+3.2 功能范围
+核心功能：
+
+对话式交互："帮我测试这个Modbus TCP设备的安全性"
+协议自动识别：扫描网络，识别Modbus/OPC-UA/Profinet设备
+智能测试生成：根据协议规范自动生成测试用例
+实时漏洞检测：边测试边分析，即时告警
+报告自动生成：输出可读的安全评估报告
+
+支持协议（第一阶段）：
+
+Modbus TCP
+OPC-UA
+
+不包括（简化范围）：
+
+❌ 复杂的多代理协调（保持单设备简单架构）
+❌ 云端服务（完全离线运行）
+❌ 主动漏洞利用（仅检测，不攻击）
+
+4. 研究问题
+RQ1: 边缘部署AI智能体在ICS协议安全测试中的有效性验证
+Effectiveness of Edge-Deployed AI Agents for ICS Protocol Security Testing
+
+RQ2: 资源约束对AI安全测试能力的影响边界
+Impact Boundaries of Resource Constraints on AI-Driven Security Testing Capabilities
+
+
+RQ3: 离线AI智能体的自主测试策略适应性
+Adaptive Testing Strategy of Offline AI Agents in Dynamic ICS Environments
+
+
+
+RQ4: 轻量级语言模型在协议安全测试中的任务适配性
+Task Suitability of Lightweight Language Models for Protocol Security Testing
+
+
+
+5. 研究方法
+5.1 硬件平台选择
+目标设备：
+设备：树莓派5 8GB（或同类边缘设备）
+CPU：ARM Cortex-A76 (4核, 2.4GHz)
+内存：8GB LPDDR4
+存储：64GB MicroSD卡
+尺寸：便携（可装入工具包）
+
+备选方案：NVIDIA Jetson Nano、Radxa Rock 5B、Orange Pi 5
+
+ 5.2 软件架构
+
+┌─────────────────────────────────────────┐
+│    Web界面 / CLI命令行                   │
+│    "请测试192.168.1.100的Modbus安全"     │
+└──────────────┬──────────────────────────┘
+               │
+┌──────────────▼──────────────────────────┐
+│       本地SLM Agent                      │
+│  - Phi         │
+│  - 协议规范知识库(RAG, 本地向量库)       │
+│  - 测试用例生成模板                      │
+└──────────────┬──────────────────────────┘
+               │
+┌──────────────▼──────────────────────────┐
+│     协议测试引擎                         │
+│  - pymodbus (Modbus)                    │
+│  - opcua-asyncio (OPC-UA)               │
+│  - Scapy (协议包构造)                    │
+└──────────────┬──────────────────────────┘
+               │
+┌──────────────▼──────────────────────────┐
+│     目标ICS设备                          │
+│  (通过以太网/串口连接)                   │
+└─────────────────────────────────────────┘
+
+6.1 技术指标
+指标目标值推理速度
+内存占用
+启动时间
+漏洞检出率
+误报率
+
+6.2 用户体验指标
+系统可用性量表(SUS)
+学习时间
+测试效率提升
+
+7. 时间规划（10个月）
+Phase 1 Month 1-2   文献阅读
+Phase 2 Month 3-4 树莓派运行的SLM demo + Modbus 基础测试
+Phase 3 Month 5-6 完整Web界面 + 对话式测试功能
+Phase 4 Month 7-8 现场试用 + 用户反馈报告
+Phase 5 Month 9-10 论文撰写
+
+8. 拓展性
+扩展至具身智能安全测试：
+- 机械狗/四足机器人的ROS2协议安全评估
+- 服务机器人的授权验证与行为安全测试
+- 无人机/AGV的通信协议与导航系统安全审计
+
+AI推理层改为提示模板库 可扩展到不同CPS领域
+协议抽象层改为插件化设计 加上机器人插件ROS2 MAVLink 
+
