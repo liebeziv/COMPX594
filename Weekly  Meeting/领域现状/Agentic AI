@@ -1,0 +1,130 @@
+一、Agentic AI领域现状(2020-2025)
+1.1 核心定义与概念框架
+Agentic AI定义(Wang et al., 2024):基于大语言模型的自主代理系统,通过获取海量网络知识,展现出通过自主规划和行动实现类人智能的显著潜力。 arXiv
+核心特征:
+
+自主性:无需显式编程即可实现目标导向的任务完成
+认知能力:记忆、规划、推理和工具使用
+环境交互:与外部信息源交互进行信息收集
+目标导向行为:多步推理和子目标生成
+
+多智能体系统定义(Zhou et al., 2024):基于LLM的多智能体系统使智能代理群体能够大规模协调和协作解决复杂任务,从孤立模型转向以协作为中心的方法。 SpringerarXiv
+1.2 技术发展时间线
+2020-2021:基础时代
+
+思维链(Chain-of-Thought, CoT)提示技术发展
+LLM用于规划的早期探索
+
+2022:突破之年
+
+2022年10月:ReAct框架(Yao et al., ICLR 2023)——协同推理与行动 arXivOpenReview
+2023年3月:CAMEL框架(Li et al., NeurIPS 2023)——角色扮演代理合作 arXivOpenReview
+
+2023:快速扩张期
+
+3月:GPT-4发布(多模态能力)
+8月:首个综合代理调研(Wang et al., 800+引用)
+10月:AutoGen框架(Microsoft, 20万+下载) Microsoft
+10月:MetaGPT(软件工程多智能体系统)
+
+2024:框架激增期
+
+2月:MetaGPT正式发布
+3月:Claude 3(20万token上下文,首次超越GPT-4) Proxet
+5月:GPT-4o(更快、多模态) TechTarget
+6月:CrewAI获得关注
+10月:Claude 3.5"计算机使用"功能 TechTarget
+
+2025:代理成熟期
+
+1月:多智能体协作调研发布
+2月:GPT-4.1系列 TechTarget
+3月:代理评估调研
+5月:Claude 4(SWE-bench 72.5%, SOTA) Anthropic
+
+1.3 统一技术架构
+根据Wang et al. (2024)的统一框架,Agentic AI系统包含五大核心模块: SpringerarXiv
+1. Profile(画像模块):具有个性化特征的代理创建
+2. Perception(感知模块):环境信息获取
+3. Memory(记忆模块):
+
+短期记忆(上下文窗口)
+长期记忆(外部存储、向量数据库)
+知识图谱
+RAG(检索增强生成)
+
+4. Planning(规划模块):
+
+Chain-of-Thought(CoT): 逐步推理
+ReAct: 思考→行动→观察循环,在ALFWorld上提升34%性能 arXivOpenReview
+Tree-of-Thought(ToT): 带回溯的多路径推理
+Graph-of-Thought(GoT): 基于图的信息建模
+
+5. Action(行动模块):
+
+工具使用能力:API调用、网络搜索、代码执行、数据库查询
+集成方式:显式调用、LLM驱动委托、并行执行
+
+1.4 代表性LLM及其代理能力
+GPT系列(OpenAI)
+模型发布时间关键特性GPT-42023年3月多模态(文本+图像),8K-128K上下文GPT-4o2024年5月全模态,速度2×,成本-50%GPT-4.12025年4月优化指令遵循,代码生成O系列2024-2025复杂推理,扩展思考时间
+Claude系列(Anthropic)
+模型发布时间关键特性Claude 32024年3月20万上下文,首次在Arena超越GPT-4Claude 3.52024年6月增强编码,Artifacts功能Claude 3.5 v22024年10月"计算机使用"(桌面自动化)Claude 42025年5月SWE-bench 72.5%(SOTA),扩展思考
+1.5 主要框架对比分析
+框架组织年份核心优势最适用场景LangChainLangChain Inc.2022600+集成,RAG自定义工作流,工具使用LangGraphLangChain Inc.2023基于图的控制流复杂状态工作流AutoGenMicrosoft2023多代理对话代码执行,对话系统CrewAICrewAI2024基于角色的简化快速原型,任务委托MetaGPTHong et al.2023软件工程团队模拟,SOP流程CAMELLi et al.2023自主合作合成数据,世界模拟
+1.6 基准测试与评估
+AgentBench(Liu et al., ICLR 2024)
+
+8个环境(操作系统、数据库、知识图谱、游戏、网络)
+指标:成功率、F1分数、奖励
+发现:顶级商业LLM表现优异,70B开源模型滞后 GitHub +3
+
+ToolBench(Qin et al., 2023)
+
+16,464个API,涵盖49个类别
+最大工具使用数据集 Evidently AIMaxim Blog
+
+WebArena(Zhou et al., 2023)
+
+4个真实域,812个任务
+功能正确性评估 Evidently AI +2
+
+τ-bench(Sierra, 2024)
+
+真实世界多轮交互
+GPT-4:<50%成功率,~25% 8次试验一致性 Sierra +3
+
+1.7 安全测试与自动化任务应用
+PentestAgent(Shen et al., ACM ASIA CCS 2025)
+
+多代理架构结合RAG arXiv +2
+自动化:情报收集、漏洞分析、利用 arXivACM Digital Library
+基准:VulHub Docker环境 arXiv
+
+自动化任务应用:
+
+软件开发:MetaGPT端到端开发,Claude Code自主编码 arXivResearchGate
+数据分析:Data Interpreter, DS-Agent
+研究:多代理并行搜索
+
+1.8 当前挑战与局限
+推理局限性:
+
+长期推理能力不足(多步任务)
+扩展对话中的上下文不一致
+
+幻觉问题:
+
+统计数据:27%的聊天机器人输出存在幻觉,46%包含事实错误 Medium
+缓解策略:RAG、CoT、多代理、自我反思、工具增强 Medium +4
+理论限制:Xu et al. (2024)认为完全消除在理论上不可能 MediumMedium
+
+可扩展性与协调:
+
+通信开销(多代理比单聊天多15倍token)
+跨代理状态管理 Anthropic
+
+1.9 代表性研究工作
+论文作者发表/年份核心贡献LLM自主代理调研Wang et al.Front Comp Sci 2024首个综合调研,统一框架ReActYao et al.
+ICLR 2023推理+行动协同,提升34%CAMELLi et al.NeurIPS 2023角色扮演自主合作AgentBenchLiu et al.ICLR 2024首
+个多维基准(8环境)MetaGPTHong et al.arXiv 2023软件开发MAS与SOPAutoGenWu et al.Microsoft 2023多代理对话框架

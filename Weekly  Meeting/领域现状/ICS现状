@@ -1,0 +1,117 @@
+工业控制系统(ICS)安全领域现状(2020-2025)
+2.1 威胁态势演变
+攻击量化数据:
+
+攻击量:2023-2024年关键基础设施遭受超过4.2亿次攻击,相当于每秒13次攻击,比2022年增长30% dragos
+物理后果:2023年68起网络攻击对ICS/OT系统造成物理后果,其中80%归因于勒索软件 dragosWaterfall-security
+关键基础设施目标:2023年向FBI报告的勒索软件攻击中,有2/5针对关键基础设施部门
+
+2.2 威胁行为者分类
+国家级行为者(Dragos追踪全球23个威胁组织,2024年9个活跃于OT): Dragos
+VOLTZITE(与Volt Typhoon重叠)
+
+目标:美国关键基础设施、电信、应急服务 dragos
+方法:入侵面向互联网的SOHO路由器,针对电力、油气、水设施 dragos
+
+BAUXITE(CyberAv3ngers)
+
+隶属:伊朗革命卫队网络与电子指挥部 dragosDragos
+2024年:部署iocontrol恶意软件,影响400+受害者 dragos
+
+ELECTRUM(与Sandworm重叠)
+
+已展示能力:电力网络运营中断 dragos
+恶意软件:AcidPour、Kapeka、FrostyGoop dragos
+2024年影响:乌克兰600+公寓楼2天供暖损失 dragosDragos
+
+**勒索软件组织:**LockBit、DarkSide、ALPHV/BlackCat、Rhysida
+**黑客行动主义者:**CyberArmyofRussia_Reborn、Hunt3r Kill3rs、Blackjack
+2.3 漏洞趋势
+
+**70%**的漏洞深藏于ICS网络内部 dragos
+**39%**可能同时导致视图丢失和控制丢失 dragos
+**22%**的公告是可网络利用且面向边界的(高于2023年的16%) dragos
+美国电网每天出现60个新的脆弱点 dragos
+
+2.4 协议安全分析
+Modbus TCP关键安全缺陷:
+
+缺乏认证:无用户授权或设备认证机制
+无加密:明文协议,易受MitM攻击
+无完整性检查:依赖低层协议 Hackers Arise
+
+已知漏洞(CVE):
+
+CVE-2023-0027:Rockwell Automation,信息泄露 CISA
+CVE-2022-28613:日立能源,输入验证错误 CVE Details
+CVE-2025-41703-41707:Phoenix Contact,DoS和操纵漏洞 CyberDanube
+
+活跃威胁:
+
+FrostyGoop恶意软件(2024):针对Modbus TCP设备,导致乌克兰供暖中断 dragos
+M.A.T.R.I.X工具:Python Modbus攻击工具 Trustwave
+
+OPC-UA已知漏洞:
+
+CVE-2021-27432:堆栈溢出,影响80%+市场产品 SecurityWeek
+CVE-2021-27434:XXE注入,可读取任意文件 Cisa
+CVE-2024-10085:资源耗尽DoS Windows Forum
+
+Profinet已知漏洞:
+
+CVE-2019-13946:DCP洪泛,远程未认证DoS CISASecurityWeek
+CVE-2025-32396-32405:P-Net库10个内存损坏漏洞 Nozomi Networks
+
+2.5 真实世界攻击案例
+Colonial Pipeline(2021年5月)
+
+攻击者:DarkSide勒索软件组织 IEEE XploreWikipedia
+入口:未启用MFA的受损VPN密码 IEEE Xplore +2
+影响:6天关闭,东海岸燃料短缺 DNVWikipedia
+成本:440万美元赎金( Harvard Business School追回230万) MicromindercsWikipedia
+
+乌克兰电网(2022年10月)
+
+攻击者:Sandworm
+方法:"就地取材"技术,跳闸断路器
+影响:4个地区停电 Anapaya
+
+水部门攻击(2023-2024)
+
+阿肯色城:成本超过16万美元 dragos
+BAUXITE活动:影响美国、欧洲、澳大利亚 dragos
+Hunt3r Kill3rs:攻击Unitronics PLC、Rockwell控制器 dragosDragos
+
+Change Healthcare(2024年2月)
+
+"美国医疗系统最重大和最严重的网络攻击"
+影响1/3美国人 Anapaya
+
+2.6 ICS测试方法
+SANS ICS613方法论:
+自上而下方法:
+
+目标:在模拟生产环境中执行参与目标
+重点:权限提升、OT边界枢轴
+
+自下而上方法:
+
+目标:开发具有预期物理后果的现实攻击场景
+重点:识别皇冠珠宝资产,评估运营弹性 SANS InstituteSANS Institute
+
+渗透测试阶段:
+
+预参与:利益相关者参与、范围定义
+侦察:收集设备、协议、通信信息
+漏洞评估:自动扫描、配置检查
+威胁建模:开发攻击场景
+主动利用:精心选择渗透攻击
+权限提升与持久性
+报告与修复 KrollRocheston
+
+ICS特殊考虑:
+
+可用性优先:ICS设计以可用性为首要优先级 ScienceDirect
+安全关注:单个错误可能触发安全系统
+遗留系统:运行过时、未打补丁的软件
+网络物理:攻击可能导致物理后果 KrollCyber Citadel
